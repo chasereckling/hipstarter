@@ -1,0 +1,5 @@
+class Fundraiser < ActiveRecord::Base
+  has_many :donations
+  has_many :users, :through => :donations
+  belongs_to :user
+end

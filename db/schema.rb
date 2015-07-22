@@ -11,18 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20150722173728) do
-
+ActiveRecord::Schema.define(version: 20150722185013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "recipients", force: :cascade do |t|
+  create_table "donations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "fundraiser_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fundraisers", force: :cascade do |t|
     t.string  "name"
-    t.integer "donors"
+    t.integer "donation_id"
     t.float   "donated_amount"
     t.string  "description"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
