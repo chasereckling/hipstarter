@@ -4,21 +4,6 @@
   <%= @fundraiser.description %>
 </p>
 
-<!-- <%= form_tag charges_path do %>
-  <article>
-    <label class="amount">
-      <span>Amount: $5.00</span>
-    </label>
-  </article>
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="pk_test_yckTsrSU974a9Xb6dE4jAWhM"
-          data-description=<%= @fundraiser.name %>
-          data-amount="500"></script>
-<% end %>
-
- -->
-
 <div class="donation-wrapper">
   <!-- <h4>Donate to <%= @fundraiser.name %> -->
 
@@ -58,3 +43,9 @@
      e.preventDefault();
    });
  </script>
+
+<% if current_user.admin || current_user.fundraiser == @fundraiser %>
+  <%= link_to "Edit Hipster",  edit_fundraiser_path(@fundraiser), class: "edit_hipster", remote: true%>
+  <%= link_to "Delete Hipster", fundraiser_path(@fundraiser), :data => {method: 'delete'} %>
+<% end %>
+<!-- add donors sidebar or something here, donate button, etc. -->
