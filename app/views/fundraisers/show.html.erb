@@ -19,29 +19,33 @@
   </div>
 </div>
 
- <script src="https://checkout.stripe.com/checkout.js"></script>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
 
- <script>
-   var handler = StripeCheckout.configure({
-     key: "pk_test_yckTsrSU974a9Xb6dE4jAWhM",
-    //  image: '/square-image.png',
-     token: function(token) {
-       // Use the token to create the charge with a server-side script.
-       // You can access the token ID with `token.id`
-     }
-   });
+  <script>
+    var handler = StripeCheckout.configure({
+      key: 'pk_test_yckTsrSU974a9Xb6dE4jAWhM',
+      image: '/assets/marketplace.png',
+      token: function(token) {
+        // Use the token to create the charge with a server-side script.
+        // You can access the token ID with `token.id`
+      }
+    });
 
-   document.getElementById('customButton').addEventListener('click', function(e) {
-     // This line is the only real modification...
-     var amount = $("#custom-donation-amount").val() * 100;
-     handler.open({
+  $('#customButton').on('click', function(e) {
+    // Open Checkout with further options
+    var amount = $("#custom-donation-amount").val() * 100;
+      handler.open({
        name: 'Donating $' + amount/100 + ' to <%= @fundraiser.name %>',
        description: "Your donation makes a difference",
-       // ... aside from this line where we use the value.
        amount: amount
-     });
-     e.preventDefault();
-   });
+      });
+      e.preventDefault();
+    });
+
+    // Close Checkout on page navigation
+    $(window).on('popstate', function() {
+      handler.close();
+    });
  </script>
 
 <% if current_user.admin || current_user.fundraiser == @fundraiser %>
