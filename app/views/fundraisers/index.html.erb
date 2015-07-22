@@ -3,7 +3,8 @@
 <% if @fundraisers.any? %>
   <ul>
   <% @fundraisers.each do |fundraiser| %>
-    <li><%= link_to fundraiser.name, fundraiser_path(fundraiser) %></li>
+    <li><strong><%= link_to fundraiser.name, fundraiser_path(fundraiser) %></strong></li>
+
   <% end %>
   </ul>
   <% else %>
