@@ -1,4 +1,4 @@
-class RecipientController < ApplicationController
+class RecipientsController < ApplicationController
   before_action :authenticate_user!
 
   def index
