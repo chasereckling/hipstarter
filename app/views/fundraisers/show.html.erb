@@ -1,8 +1,15 @@
-<h1> <%= @fundraiser.name %> </h1>
+<div class="row">
+  <div class="col-md-6">
+    <h1><i><%= @fundraiser.name %></i></h1>
+    <%= image_tag @fundraiser.picture(:medium) %>
+    <p><%= @fundraiser.description %></p>
+    <% if current_user.admin || current_user.fundraiser == @fundraiser %>
+      <%= link_to "Edit Hipster",  edit_fundraiser_path(@fundraiser), class: "edit_hipster", remote: true %>
+      <%= link_to "Delete Hipster", fundraiser_path(@fundraiser), :data => {method: 'delete'} %>
+    <% end %>
+  </div>
 
-<p>
-  <%= @fundraiser.description %>
-</p>
+<div class="col-md-6">
 
 <div class="donation-wrapper">
   <!-- <h4>Donate to <%= @fundraiser.name %> -->
@@ -37,7 +44,8 @@
       handler.open({
        name: 'Donating $' + amount/100 + ' to <%= @fundraiser.name %>',
        description: "Your donation makes a difference",
-       amount: amount
+       amount: amount,
+       image: '<%= @fundraiser.picture %>'
       });
       e.preventDefault();
     });
@@ -47,9 +55,7 @@
       handler.close();
     });
  </script>
+ </div>
+ </div>
 
-<% if current_user.admin || current_user.fundraiser == @fundraiser %>
-  <%= link_to "Edit Hipster",  edit_fundraiser_path(@fundraiser), class: "edit_hipster", remote: true %>
-  <%= link_to "Delete Hipster", fundraiser_path(@fundraiser), :data => {method: 'delete'} %>
-<% end %>
 <!-- add donors sidebar or something here, donate button, etc. -->
