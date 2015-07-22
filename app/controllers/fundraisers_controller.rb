@@ -1,5 +1,6 @@
 class FundraisersController < ApplicationController
   before_action :authenticate_user!
+  before_filter has_fundraiser: false, :except => [:show, :index, :edit, :update, :destroy]
 
   def index
     @fundraisers = Fundraiser.all
