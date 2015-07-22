@@ -10,4 +10,6 @@
   <p>There are no hipsters added yet! Head to Hawthorne to find more</p>
 <% end %>
 
-<%= link_to "Add a Hipster", new_fundraiser_path, class: "add_hipster", remote: true %>
+<% if current_user.admin || current_user.fundraiser == nil %>
+  <%= link_to "Add a Hipster", new_fundraiser_path, class: "add_hipster", remote: true %>
+<% end %>
