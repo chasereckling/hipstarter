@@ -1,0 +1,60 @@
+<h1> <%= @fundraiser.name %> </h1>
+
+<p>
+  <%= @fundraiser.description %>
+</p>
+
+<!-- <%= form_tag charges_path do %>
+  <article>
+    <label class="amount">
+      <span>Amount: $5.00</span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_yckTsrSU974a9Xb6dE4jAWhM"
+          data-description=<%= @fundraiser.name %>
+          data-amount="500"></script>
+<% end %>
+
+ -->
+
+<div class="donation-wrapper">
+  <!-- <h4>Donate to <%= @fundraiser.name %> -->
+
+  <div class="inner-donation-wrapper">
+    <input class="form-control"
+          type="number"
+          id="custom-donation-amount"
+          placeholder="$50.00"
+          min="0"
+          step="10.00"/>
+
+    <button id="customButton">Donate</button>
+  </div>
+</div>
+
+ <script src="https://checkout.stripe.com/checkout.js"></script>
+
+ <script>
+   var handler = StripeCheckout.configure({
+     key: "pk_test_yckTsrSU974a9Xb6dE4jAWhM",
+    //  image: '/square-image.png',
+     token: function(token) {
+       // Use the token to create the charge with a server-side script.
+       // You can access the token ID with `token.id`
+     }
+   });
+
+   document.getElementById('customButton').addEventListener('click', function(e) {
+     // This line is the only real modification...
+     var amount = $("#custom-donation-amount").val() * 100;
+     handler.open({
+       name: 'Donating $' + amount/100 + ' to <%= @fundraiser.name %>',
+       description: "Your donation makes a difference",
+       // ... aside from this line where we use the value.
+       amount: amount
+     });
+     e.preventDefault();
+   });
+ </script>

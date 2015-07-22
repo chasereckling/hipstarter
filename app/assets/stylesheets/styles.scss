@@ -16,3 +16,32 @@
     cursor: pointer;
   }
 }
+
+.donation-wrapper {
+  height: 133px;
+  width: 180px;
+  padding: 25px;
+  background: #08c;
+  border-radius: 5px;
+  margin-left: 100px;
+  #custom-donation-amount {
+    font-size: 22px;
+    height: 40px;
+  }
+  .innter-donation-wrapper {
+    background: #08c;
+    color: white;
+  }
+  button {
+    color: #08c;
+    height: 33px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: #f1f1f1;
+    border-bottom: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    margin: 8px auto;
+    font-size: 20px;
+  }
+}

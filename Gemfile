@@ -13,6 +13,7 @@ gem 'bootstrap_form'
 gem 'devise'
 gem 'simple_form'
 gem 'pry', :require => 'pry'
+gem 'stripe'
 
 group :development do
   gem 'byebug'
