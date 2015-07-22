@@ -1,5 +1,9 @@
 class RecipientController < ApplicationController
   def index
+    @recipients = Recipient.all
+  end
+
+  def new
   end
 
   def create
@@ -9,17 +13,28 @@ class RecipientController < ApplicationController
   end
 
   def edit
+    @recipient = params.find(:id)
   end
 
   def update
+    recipient = params.find(:id)
+    recipient.update(recipient_params)
+    redirect_to :back
   end
 
   def destroy
+    recipient = params.find(:id)
+    recipient.destroy
+    redirect_to :back
   end
 
   private
 
     def recipient_params
       params.require(:recipient).permit(:name)
+    end
+
+    def set_user
+      @
     end
 end
