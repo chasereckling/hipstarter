@@ -1,9 +1,9 @@
-<h2>Hipstarter</h2>
+<h1>Hipstarter</h1>
 
 <% if @fundraisers.any? %>
   <ul>
   <% @fundraisers.each do |fundraiser| %>
-    <%= link_to fundraiser.name, fundraiser_path(fundraiser) %>
+    <li><%= link_to fundraiser.name, fundraiser_path(fundraiser) %></li>
   <% end %>
   </ul>
   <% else %>
