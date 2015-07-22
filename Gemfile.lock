@@ -246,6 +246,3 @@ DEPENDENCIES
   uglifier
   warden
   web-console
-
-BUNDLED WITH
-   1.10.5
