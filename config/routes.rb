@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :recipients
 
   root to: "recipients#index"
+  get '/stripe_testing', to: 'stripe_testing#index', as: 'stripe_testing'
 end
