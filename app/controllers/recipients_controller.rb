@@ -1,4 +1,6 @@
 class RecipientController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @recipients = Recipient.all
   end
@@ -31,10 +33,6 @@ class RecipientController < ApplicationController
   private
 
     def recipient_params
-      params.require(:recipient).permit(:name)
-    end
-
-    def set_user
-      @
+      params.require(:recipient).permit(:name, :description)
     end
 end
