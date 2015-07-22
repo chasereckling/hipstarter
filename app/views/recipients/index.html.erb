@@ -1,0 +1,11 @@
+<h2>Hipstarter</h2>
+
+<% if @recipients.any? %>
+  <ul>
+  <% @recipients.each do |recipient| %>
+    <%= link_to recipient.name, recipient_path(recipient) %>
+  <% end %>
+  </ul>
+  <% else %>
+  <p>There are no hipsters added yet! Head to Hawthorne to find more</p>
+<% end %>
