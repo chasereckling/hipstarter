@@ -35,5 +35,3 @@ group :test do
   gem 'simplecov', require: false
   gem 'poltergeist'
 end
-
-#ruby "2.2.2"
