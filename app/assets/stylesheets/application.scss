@@ -16,3 +16,55 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@font-face {
+  font-family: 'london';
+  src:url("/fonts/London.ttf");
+}
+
+@font-face {
+  font-family: 'besom';
+  src:url("/fonts/Besom.ttf");
+}
+
+h2 {
+  font-family: london;
+}
+
+h1 {
+  font-family: london;
+}
+
+body {
+  background-image: url("/images/hipster.jpg");
+}
+
+a {
+  font-family: besom;
+  font-size: 1.5em;
+}
+
+.camera_icon {
+  height: 75px;
+  width: auto;
+}
+
+ul
+{
+  list-style-type: none;
+}
+
+.navbar {
+  background-image: url("/images/wood_bar.jpg");
+  overflow: hidden;
+  color: white;
+  border: 0px
+}
+
+a {
+  color: brown;
+}
+
+a:hover {
+  color: yellow;
+}

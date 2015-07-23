@@ -8,10 +8,10 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
       <ul class="nav navbar-nav">
+        <%= link_to image_tag("/images/camera_icon.png", class: "camera_icon"), root_path %>
 
-        <li class="pull-left"><%= link_to "Hipstarter", "/" %></li>
 
         <% if user_signed_in? %>
           <li class="pull-right">
@@ -36,8 +36,8 @@
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
+<div class="container">
   <%= yield %>
-
+</div>
 </body>
 </html>

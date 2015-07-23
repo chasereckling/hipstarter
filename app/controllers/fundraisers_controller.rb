@@ -27,24 +27,24 @@ class FundraisersController < ApplicationController
   end
 
   def edit
-    @fundraiser = params.find(:id)
+    @fundraiser = Fundraiser.find(params[:id])
   end
 
   def update
-    fundraiser = params.find(:id)
+    fundraiser = Fundraiser.find(params[:id])
     fundraiser.update(recipient_params)
     redirect_to :back
   end
 
   def destroy
-    fundraiser = params.find(:id)
+    fundraiser = Fundraiser.find(params[:id])
     fundraiser.destroy
-    redirect_to :back
+    redirect_to fundraisers_path
   end
 
   private
 
     def fundraiser_params
-      params.require(:fundraiser).permit(:name, :description)
+      params.require(:fundraiser).permit(:name, :description, :picture)
     end
 end
