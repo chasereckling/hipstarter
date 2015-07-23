@@ -18,6 +18,6 @@
 
 $(function() {
   $(".flash-wrapper").delay(1500).animate({
-    top: '-500'
+    bottom: '-500'
   }, 500, "easeInBack");
 });
