@@ -8,6 +8,13 @@
 </head>
 <body>
 
+    <% if flash[:notice] %>
+      <div class="flash-wrapper">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+    
     <nav class="navbar navbar-default navbar-fixed">
       <ul class="nav navbar-nav">
         <%= link_to image_tag("/images/camera_icon.png", class: "camera_icon"), root_path %>
@@ -32,10 +39,6 @@
 
       </ul>
     </nav>
-
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 <div class="container">
   <%= yield %>
 </div>
