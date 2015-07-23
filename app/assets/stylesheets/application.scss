@@ -32,10 +32,8 @@
   src:url("/fonts/TravelingTypewriter.ttf")
 }
 
-h2 {
-  font-family: london;
-}
-
+h3,
+h2,
 h1 {
   font-family: london;
 }
@@ -52,7 +50,7 @@ label {
 }
 
 #fundraiser_name {
-  width: 20%;
+  width: 150px;
 }
 
 #fundraiser_description {
@@ -61,6 +59,10 @@ label {
 
 input {
   background: #e6e6e6;
+}
+
+#new_user {
+  width: 300px;
 }
 
 a {
