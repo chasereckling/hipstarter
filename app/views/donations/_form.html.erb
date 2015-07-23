@@ -1,7 +1,10 @@
 <!-- http://stackoverflow.com/questions/20049865/stripe-checkout-with-custom-integration-in-rails -->
-<%= form_tag charges_path, id: 'chargeform' do %>
+<%= form_tag donations_path, id: 'chargeform' do %>
   <script src="https://checkout.stripe.com/checkout.js"></script>
-  <%= text_field_tag :stripe_amount, nil, id: "custom_amount" %>
+  <div class="input-group">
+    <span class="input-group-addon">$</span>
+    <%= text_field_tag :stripe_amount, nil, class:"form-control", id: "custom_amount" %>
+  </div>
   <%= hidden_field_tag 'stripe_token', "" %>
   <%= hidden_field_tag 'stripe_email', "" %>
   <button id="customButton" class="btn btn-large btn-primary">Donate!</button>

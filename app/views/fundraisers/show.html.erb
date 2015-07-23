@@ -3,17 +3,12 @@
     <h1><i><%= @fundraiser.name %></i></h1>
     <%= image_tag @fundraiser.picture(:medium) %>
     <p><%= @fundraiser.description %></p>
+
+    <%= render "donations/form" %>
+
     <% if current_user.admin || current_user.fundraiser == @fundraiser %>
-      <%= link_to "Edit Hipster",  edit_fundraiser_path(@fundraiser), class: "edit_hipster", remote: true %>
+      <%= link_to "Edit Hipster",  edit_fundraiser_path(@fundraiser), class: "edit_hipster", remote: true%>
       <%= link_to "Delete Hipster", fundraiser_path(@fundraiser), :data => {method: 'delete'} %>
     <% end %>
   </div>
-
-<div class="col-md-6">
-
-<%= render "charges/form" %>
-
-<% if current_user.admin || current_user.fundraiser == @fundraiser %>
-  <%= link_to "Edit Hipster",  edit_fundraiser_path(@fundraiser), class: "edit_hipster", remote: true%>
-  <%= link_to "Delete Hipster", fundraiser_path(@fundraiser), :data => {method: 'delete'} %>
-<% end %>
+</div>
