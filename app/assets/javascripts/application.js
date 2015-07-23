@@ -19,5 +19,5 @@
 $(function() {
   $(".flash-wrapper").delay(1500).animate({
     top: '-500'
-  }, 2500, "easeOutBounce");
+  }, 500, "easeInBack");
 });
