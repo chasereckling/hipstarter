@@ -50,11 +50,13 @@
   width: 1450px;
   background-image: image-url("pbr");
   z-index:9999;
+  transform: scale(.9,.9);
+  transform-origin: 0% 0%;
   p {
-    width: 100vw;
     font-size: 25px;
     color: white;
-    margin-top: 100px;
     text-align: center;
+    width: 75vw;
+    margin: 100px auto;
   }
 }
