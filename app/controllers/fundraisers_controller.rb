@@ -11,7 +11,6 @@ class FundraisersController < ApplicationController
   end
 
   def create
-    binding.pry
     @fundraiser = Fundraiser.new(fundraiser_params)
     @fundraiser.update(user_id: current_user.id)
     if @fundraiser.save

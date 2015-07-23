@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe User do
+  it {should have_many :fundraisers}
+  it {should have_many :donations}
+  it {should have_one :fundraiser}
 end
