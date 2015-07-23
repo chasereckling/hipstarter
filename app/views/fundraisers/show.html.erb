@@ -4,7 +4,7 @@
     <%= image_tag @fundraiser.picture(:medium) %>
     <p><%= @fundraiser.description %></p>
 
-    <%= render "charges/form" %>
+    <%= render "donations/form" %>
 
     <% if current_user.admin || current_user.fundraiser == @fundraiser %>
       <%= link_to "Edit Hipster",  edit_fundraiser_path(@fundraiser), class: "edit_hipster", remote: true%>
