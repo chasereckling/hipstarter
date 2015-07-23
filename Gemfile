@@ -16,6 +16,7 @@ gem 'pry', :require => 'pry'
 gem 'stripe'
 gem 'paperclip'
 gem 'pundit'
+gem 'image_magick'
 
 group :development do
   gem 'byebug'
