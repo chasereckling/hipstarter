@@ -32,7 +32,7 @@ class FundraisersController < ApplicationController
 
   def update
     fundraiser = Fundraiser.find(params[:id])
-    fundraiser.update(recipient_params)
+    fundraiser.update(fundraiser_params)
     redirect_to :back
   end
 
