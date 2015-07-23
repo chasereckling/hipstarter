@@ -11,6 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+  $(".flash-wrapper").delay(1500).animate({
+    top: '-500'
+  }, 500, "easeInBack");
+});

@@ -27,6 +27,11 @@
   src:url("/fonts/Besom.ttf");
 }
 
+@font-face {
+  font-family: 'typewriter';
+  src:url("/fonts/TravelingTypewriter.ttf")
+}
+
 h2 {
   font-family: london;
 }
@@ -37,6 +42,25 @@ h1 {
 
 body {
   background-image: url("/images/hipster.jpg");
+  font-family: typewriter;
+  color: #454545;
+}
+
+label {
+  font-family: besom;
+  font-size: 1.25em;
+}
+
+#fundraiser_name {
+  width: 20%;
+}
+
+#fundraiser_description {
+  height: 40%;
+}
+
+input {
+  background: #e6e6e6;
 }
 
 a {

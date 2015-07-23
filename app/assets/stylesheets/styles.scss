@@ -1,9 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-  padding-top: 51px;
-}
 .absolutely-centered {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -20,31 +17,44 @@ body {
   }
 }
 
-.donation-wrapper {
-  height: 133px;
-  width: 180px;
-  padding: 25px;
-  background: #08c;
+#chargeform {
+  width: 260px;
+  background: url("/images/wood_bar.jpg");
   border-radius: 5px;
-  margin-left: 100px;
-  #custom-donation-amount {
-    font-size: 22px;
-    height: 40px;
-  }
-  .innter-donation-wrapper {
-    background: #08c;
-    color: white;
+  text-align: center;
+  padding: 40px 20px;
+  input {
+    height: 35px;
+    line-height: 20px;
+    font-size: 23px;
+    color: #555;
   }
   button {
-    color: #08c;
-    height: 33px;
-    width: 100%;
-    border-radius: 5px;
-    border: none;
-    background-color: #f1f1f1;
-    border-bottom: 2px solid #ccc;
-    border-right: 2px solid #ccc;
-    margin: 8px auto;
+    margin-top: 20px;
+    background-color: black;
+    border: 2px solid white;
     font-size: 20px;
+    width: 100%;
+  }
+  #custom_amount {
+    height: 45px;
+    font-size: 30px;
+  }
+}
+
+.flash-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 240px;
+  width: 1450px;
+  background-image: image-url("pbr");
+  z-index:9999;
+  p {
+    width: 100vw;
+    font-size: 25px;
+    color: white;
+    margin-top: 100px;
+    text-align: center;
   }
 }

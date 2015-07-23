@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'pry', :require => 'pry'
 gem 'stripe'
 gem 'paperclip'
+gem 'pundit'
 
 group :development do
   gem 'byebug'
