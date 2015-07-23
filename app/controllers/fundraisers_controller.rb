@@ -11,11 +11,11 @@ class FundraisersController < ApplicationController
   end
 
   def create
+    binding.pry
     @fundraiser = Fundraiser.new(fundraiser_params)
     @fundraiser.update(user_id: current_user.id)
     if @fundraiser.save
       flash[:notice] = "Your hipster has been added despite his protests about this being lame"
-      redirect_to fundraiser_path(@fundraiser)
     else
       flash[:notice] = "Your hipster is too cool for this. Give him a stern talking-to and try again"
       render :new

@@ -1,0 +1,31 @@
+<!-- http://stackoverflow.com/questions/20049865/stripe-checkout-with-custom-integration-in-rails -->
+<%= form_tag charges_path, id: 'chargeform' do %>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <%= text_field_tag :stripe_amount, nil, id: "custom_amount" %>
+  <%= hidden_field_tag 'stripe_token', "" %>
+  <%= hidden_field_tag 'stripe_email', "" %>
+  <button id="customButton" class="btn btn-large btn-primary">Donate!</button>
+
+  <script>
+    var handler = StripeCheckout.configure({
+      key: 'pk_test_yckTsrSU974a9Xb6dE4jAWhM',
+      image: '/assets/tie.png',
+      token: function(token) {
+        $("#stripe_token").val(token.id);
+        $("#stripe_email").val(token.email);
+        $("#chargeform").submit();
+      }
+    });
+
+    $('#customButton').on('click', function(e) {
+      var amount = $("#custom_amount").val();
+      // Open Checkout with further options
+      handler.open({
+        name: 'Donating $' + amount,
+        description: 'Your donation changes lives.',
+        amount: amount * 100
+      });
+      e.preventDefault();
+    });
+  </script>
+<% end %>

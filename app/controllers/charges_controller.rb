@@ -3,25 +3,26 @@ class ChargesController < ApplicationController
     @name = "Bill"
   end
 
-def create
-  binding.pry
-  # Amount in cents
-  @amount = 500
+  def create
+    # Set secret key: remember to change this to live secret key in production
+    Stripe.api_key = "sk_test_gIgy2ECRkPETPxugi8IuHm1X"
 
-  customer = Stripe::Customer.create(
-    :email => 'example@stripe.com',
-    :card  => params[:stripeToken]
-  )
+    # Get the credit card details submitted by the form
+    token = params[:stripe_token]
+    amount = params[:stripe_amount].to_i * 100
 
-  charge = Stripe::Charge.create(
-    :customer    => customer.id,
-    :amount      => @amount,
-    :description => 'Rails Stripe customer',
-    :currency    => 'usd'
-  )
-
-  rescue Stripe::CardError => e
-    flash[:error] = e.message
-    redirect_to charges_path
+    # Create the charge on Stripe's servers - this will charge the user's card
+    begin
+      charge = Stripe::Charge.create(
+        :amount => amount,
+        :currency => "usd",
+        :source => token,
+        :description => "Example charge"
+      )
+      flash[:notice] = "Payment submitted!"
+      redirect_to :back
+    rescue Stripe::CardError => e
+      # The card has been declined
+    end
   end
 end
