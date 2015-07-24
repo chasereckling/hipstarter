@@ -24,6 +24,11 @@ class FundraisersController < ApplicationController
 
   def show
     @fundraiser = Fundraiser.find(params[:id])
+    @total = 0.0
+    @fundraiser.donations.each do |donation|
+      @total += donation.amount / 100
+    end
+
   end
 
   def edit
