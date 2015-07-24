@@ -20,6 +20,8 @@
 require 'simplecov'
 require 'capybara/rspec'
 require 'capybara/poltergeist'
+require 'image_magick'
+require 'paperclip'
 
 SimpleCov.start
 

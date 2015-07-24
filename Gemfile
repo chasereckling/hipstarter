@@ -39,4 +39,6 @@ group :test do
   gem 'simplecov', require: false
   gem 'poltergeist'
   gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem 'image_magick'
+  gem 'paperclip'
 end

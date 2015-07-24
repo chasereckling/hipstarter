@@ -3,15 +3,16 @@ FactoryGirl.define do
 		email('test@test.com')
 		password('testtest')
 		admin false
-	end
-	factory :admin, class: User do
-		email('admin@admin.com')
-		password('adminadmin')
-		admin true
+
+		factory :admin, class: User do
+			email('admin@admin.com')
+			password('adminadmin')
+			admin true
+		end
 	end
 	factory :fundraiser do
 		name('dave')
 		description('dave dave dave')
-		user
+		picture { File.new("#{Rails.root}/public/images/hipster.jpg") }
 	end
 end

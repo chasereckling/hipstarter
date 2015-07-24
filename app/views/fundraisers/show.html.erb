@@ -1,7 +1,9 @@
 <div class="row">
   <div class="col-md-6">
     <h1><i><%= @fundraiser.name %></i></h1>
+    <% if @fundraiser.picture %>
     <%= image_tag @fundraiser.picture(:medium) %>
+    <% end %>
     <p><%= @fundraiser.description %></p>
 
     <%= render "donations/form" %>
