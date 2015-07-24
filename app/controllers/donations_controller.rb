@@ -10,6 +10,12 @@ class DonationsController < ApplicationController
     # Get the credit card details submitted by the form
     token = params[:stripe_token]
     amount = params[:stripe_amount].to_i * 100
+    fundraiser_id = params[:fundraiser_id]
+
+    fundraiser = Fundraiser.find(fundraiser_id)
+    donation = Donation.create(user_id: current_user, amount: amount, user_id: current_user.id)
+
+    fundraiser.donations.push(donation);
 
     # Create the charge on Stripe's servers - this will charge the user's card
     begin

@@ -7,6 +7,7 @@
   </div>
   <%= hidden_field_tag 'stripe_token', "" %>
   <%= hidden_field_tag 'stripe_email', "" %>
+  <%= hidden_field_tag 'fundraiser_id', @fundraiser.id %>
   <button id="customButton" class="btn btn-large btn-primary">Donate!</button>
 
   <script>
