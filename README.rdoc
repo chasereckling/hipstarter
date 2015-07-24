@@ -5,7 +5,7 @@ You've seen them on the streets of Hawthorne. You've seen their creative bottle 
 
 Haven't you wanted to help support these poor people? Haven't you?!? Now you can... with HIPSTARTER.
 
-HIPSTARTER lets you find hipsters that are down on their luck, those who only desire the sweet taste of PBR and judgement of your taste in music, and let's you donate your hard-earned money to their cause. You don't have to be wealthy to help them out, they don't care how much they get -- literally, they are pretty much over this by now. 
+HIPSTARTER lets you find hipsters that are down on their luck, those who only desire the sweet taste of PBR and judgement of your taste in music, and let's you donate your hard-earned money to their cause. You don't have to be wealthy to help them out, they don't care how much they get -- literally, they are pretty much over this by now.
 
 <Sarah McLoughlin> I willll rememember you.....</Sarah McLoughlin>
 
@@ -27,8 +27,10 @@ Steve Schneider
   2.) Navigate into the project folder. Install the necessary gems with 'bundle install'.
   3.) Start your postgreSQL server with 'postgres'. In a new terminal window, type 'rake db:setup' to create the     database and migrate the tables.
   4.) Start your rails server with 'rails s'. Open your web browser and navigate to localhost:3000.
-  5.) Start supporting your favorite hipster today! Or, if you are a hipster and you're not too cool for this, sign up and make your own hipster fundraiser.
-
-
-
-
+  5.) After going through the sign up process you can make your user an admin locally on your machine. Normal users may only create one hipster and may only edit and delete thier own hipster.
+      a. Open a new tab in Terminal.
+      b. Type "psql"
+      c. Enter psql command: \c hipstarter_development
+      d. Enter Sql command: UPDATE users SET admin=true WHERE id=1;
+      e. 1 can be replaced with any user id you wish to make an admin.
+  6.) Start supporting your favorite hipster today! Or, if you are a hipster and you're not too cool for this, sign up and make your own hipster fundraiser.
