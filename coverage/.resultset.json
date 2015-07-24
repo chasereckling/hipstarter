@@ -181,6 +181,7 @@
         null,
         null,
         null,
+        null,
         null
       ],
       "/Users/brentbailey/Documents/hipstarter/config/initializers/assets.rb": [
@@ -854,7 +855,6 @@
         1,
         1,
         1,
-        1,
         null,
         null
       ],
@@ -957,6 +957,7 @@
         0,
         0,
         0,
+        0,
         null
       ],
       "/Users/brentbailey/Documents/hipstarter/app/models/fundraiser.rb": [
@@ -973,6 +974,6 @@
         null
       ]
     },
-    "timestamp": 1437678578
+    "timestamp": 1437760370
   }
 }

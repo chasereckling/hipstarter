@@ -13,6 +13,5 @@ FactoryGirl.define do
 	factory :fundraiser do
 		name('dave')
 		description('dave dave dave')
-		picture { File.new("#{Rails.root}/public/images/hipster.jpg") }
 	end
 end
