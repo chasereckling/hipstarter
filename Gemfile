@@ -14,7 +14,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'pry', :require => 'pry'
 gem 'stripe'
-gem 'paperclip'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'pundit'
 
 group :development do
@@ -37,4 +37,5 @@ group :test do
   gem 'warden'
   gem 'simplecov', require: false
   gem 'poltergeist'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end

@@ -5,6 +5,7 @@
       <%= image_tag @fundraiser.picture(:medium) %>
     <% end %>
     <p>This hipster's total donations: $<%= @total %></p>
+
     <p><%= @fundraiser.description %></p>
     <%= render "donations/form" %>
 
