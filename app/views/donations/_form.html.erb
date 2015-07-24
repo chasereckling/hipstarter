@@ -10,17 +10,20 @@
   <button id="customButton" class="btn btn-large btn-primary">Donate!</button>
 
   <script>
-    var handler = StripeCheckout.configure({
-      key: 'pk_test_yckTsrSU974a9Xb6dE4jAWhM',
-      image: '/assets/tie.png',
-      token: function(token) {
-        $("#stripe_token").val(token.id);
-        $("#stripe_email").val(token.email);
-        $("#chargeform").submit();
-      }
-    });
+
 
     $('#customButton').on('click', function(e) {
+      e.preventDefault();
+      var handler = StripeCheckout.configure({
+        key: 'pk_test_yckTsrSU974a9Xb6dE4jAWhM',
+        image: '/assets/tie.png',
+        token: function(token) {
+          $("#stripe_token").val(token.id);
+          $("#stripe_email").val(token.email);
+          $("#chargeform").submit();
+        }
+      });
+
       var amount = $("#custom_amount").val();
       // Open Checkout with further options
       handler.open({
@@ -28,7 +31,6 @@
         description: 'Your donation changes lives.',
         amount: amount * 100
       });
-      e.preventDefault();
     });
   </script>
 <% end %>
