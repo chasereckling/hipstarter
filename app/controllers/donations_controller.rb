@@ -9,7 +9,7 @@ class DonationsController < ApplicationController
 
     # Get the credit card details submitted by the form
     token = params[:stripe_token]
-    amount = params[:stripe_amount].to_i * 100
+    amount = (params[:stripe_amount].to_f * 100).round
     fundraiser_id = params[:fundraiser_id]
 
     fundraiser = Fundraiser.find(fundraiser_id)

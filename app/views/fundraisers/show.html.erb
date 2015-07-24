@@ -2,8 +2,8 @@
   <div class="col-md-6">
     <h1><i><%= @fundraiser.name %></i></h1>
     <%= image_tag @fundraiser.picture(:medium) %>
+    <%= @total %>
     <p><%= @fundraiser.description %></p>
-
     <%= render "donations/form" %>
 
     <% if current_user.admin || current_user.fundraiser == @fundraiser %>
