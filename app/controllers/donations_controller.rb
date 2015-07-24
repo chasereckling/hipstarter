@@ -13,7 +13,8 @@ class DonationsController < ApplicationController
 
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
-      charge = Stripe::Charge.create(
+      # charge = Stripe::Charge.create(
+      charge = Stripe::Donate.create(
         :amount => amount,
         :currency => "usd",
         :source => token,
