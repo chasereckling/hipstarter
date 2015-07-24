@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/spec_test/spec/features/add_hipster_path_spec.rb": [
+      "/Users/Guest/Desktop/hipstarter/spec/features/add_hipster_path_spec.rb": [
         1,
         null,
         1,
@@ -17,7 +17,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/spec/rails_helper.rb": [
+      "/Users/Guest/Desktop/hipstarter/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -100,14 +100,14 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/config/environment.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/spec_test/config/application.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/application.rb": [
         1,
         null,
         1,
@@ -135,12 +135,12 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/config/boot.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/Guest/Desktop/spec_test/config/environments/test.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/environments/test.rb": [
         1,
         null,
         null,
@@ -185,7 +185,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/assets.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -198,7 +198,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/backtrace_silencers.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -207,12 +207,12 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/cookies_serializer.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/devise.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -479,13 +479,13 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/filter_parameter_logging.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/inflections.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -503,18 +503,18 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/mime_types.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/session_store.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/simple_form.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/simple_form.rb": [
         null,
         1,
         null,
@@ -682,7 +682,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/simple_form_bootstrap.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/simple_form_bootstrap.rb": [
         null,
         1,
         1,
@@ -820,11 +820,11 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/stripe.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/stripe.rb": [
         1,
         1
       ],
-      "/Users/Guest/Desktop/spec_test/config/initializers/wrap_parameters.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -840,7 +840,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/spec/factories.rb": [
+      "/Users/Guest/Desktop/hipstarter/spec/factories.rb": [
         1,
         1,
         1,
@@ -860,7 +860,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/app/models/user.rb": [
+      "/Users/Guest/Desktop/hipstarter/app/models/user.rb": [
         1,
         null,
         null,
@@ -872,7 +872,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/config/routes.rb": [
+      "/Users/Guest/Desktop/hipstarter/config/routes.rb": [
         1,
         1,
         null,
@@ -885,15 +885,15 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/app/helpers/application_helper.rb": [
+      "/Users/Guest/Desktop/hipstarter/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/app/helpers/charges_helper.rb": [
+      "/Users/Guest/Desktop/hipstarter/app/helpers/charges_helper.rb": [
         1,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/spec/features/donation_create_spec.rb": [
+      "/Users/Guest/Desktop/hipstarter/spec/features/donation_create_spec.rb": [
         1,
         null,
         1,
@@ -914,38 +914,38 @@
         1,
         1,
         null,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Guest/Desktop/spec_test/spec/features/log_in_path_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/spec/models/donation_spec.rb": [
+      "/Users/Guest/Desktop/hipstarter/spec/features/log_in_path_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/hipstarter/spec/models/donation_spec.rb": [
         1,
         null,
         1,
@@ -953,13 +953,13 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/app/models/donation.rb": [
+      "/Users/Guest/Desktop/hipstarter/app/models/donation.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/spec/models/fundraiser_spec.rb": [
+      "/Users/Guest/Desktop/hipstarter/spec/models/fundraiser_spec.rb": [
         1,
         null,
         1,
@@ -969,7 +969,7 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/app/models/fundraiser.rb": [
+      "/Users/Guest/Desktop/hipstarter/app/models/fundraiser.rb": [
         1,
         1,
         1,
@@ -982,7 +982,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/spec/models/user_spec.rb": [
+      "/Users/Guest/Desktop/hipstarter/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -991,20 +991,20 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/app/controllers/landing_page_controller.rb": [
+      "/Users/Guest/Desktop/hipstarter/app/controllers/landing_page_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/app/controllers/application_controller.rb": [
+      "/Users/Guest/Desktop/hipstarter/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/app/controllers/fundraisers_controller.rb": [
+      "/Users/Guest/Desktop/hipstarter/app/controllers/fundraisers_controller.rb": [
         1,
         1,
         1,
@@ -1061,7 +1061,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/app/controllers/donations_controller.rb": [
+      "/Users/Guest/Desktop/hipstarter/app/controllers/donations_controller.rb": [
         1,
         1,
         0,
@@ -1098,7 +1098,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/spec_test/app/controllers/users/registrations_controller.rb": [
+      "/Users/Guest/Desktop/hipstarter/app/controllers/users/registrations_controller.rb": [
         1,
         1,
         1,
@@ -1161,6 +1161,6 @@
         null
       ]
     },
-    "timestamp": 1437768715
+    "timestamp": 1437771969
   }
 }
