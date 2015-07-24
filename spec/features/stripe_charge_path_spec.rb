@@ -5,6 +5,7 @@ describe 'the stripe charge path' do
 		user_login
 		FactoryGirl.create(:fundraiser)
 		visit '/'
+		click_on 'Adopt'
 		click_on "dave"
 		fill_in "custom_amount", with: 10
 		click_button("Donate!")
