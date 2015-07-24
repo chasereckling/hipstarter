@@ -1,8 +1,10 @@
 <div class="row">
   <div class="col-md-6">
     <h1><i><%= @fundraiser.name %></i></h1>
-    <%= image_tag @fundraiser.picture(:medium) %>
-    <%= @total %>
+    <% if @fundraiser.picture.present? %>
+      <%= image_tag @fundraiser.picture(:medium) %>
+    <% end %>
+    <p>This hipster's total donations: $<%= @total %></p>
     <p><%= @fundraiser.description %></p>
     <%= render "donations/form" %>
 
